@@ -1,16 +1,36 @@
-const http = require("http");
-const express = require("express");
-const port = 3000;
+
+const express = require('express');
+
+const app = express();
+app.use(express.json());
+
+const port = process.env.port || 3000;
 
 
-const server = http.createServer((req, res)=>{
+app.get('/', (req, res)=>{
   if(req.url === '/'){
-    res.write("hello from backend to frontend!");
+    res.setHeader("Content-Type", "text/plain");
+    res.send("hello from backend to frontend!");
     res.end();
+  }else{
+    alert("404... Something happened, PLease try again")
   }
 });
 
 
-server.listen(port , () =>
-  console.log(`Example app listening at http://localhost:${port}`
+app.post('/weather', (req, res)=>{
+  const cityName = req.body.cityName
+  res.setHeader("Content-Type", "text/plain");
+    if(!cityName){
+      return res.send({message : "OOPS... Please enter City Name"})
+    }
+  res.send(cityName);
+  res.end();
+})
+
+
+
+
+app.listen(port , () =>
+  console.log(`app listening at http://localhost:${port}`
   ));
