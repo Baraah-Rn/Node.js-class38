@@ -1,3 +1,4 @@
 export const keys = {
-  API_KEY: "5ed42efa9f449846d85b11da3ac26721",
+  API_KEY: "be64f69d0b45d5bd77fb81b0856e7c96",
 };
+

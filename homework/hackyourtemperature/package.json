@@ -2,7 +2,7 @@
   "name": "node.js-class38",
   "version": "1.0.0",
   "description": "> If you are following the HackYourFuture curriculum we recommend you to start with module 1: [HTML/CSS/GIT](https://github.com/HackYourFuture/HTML-CSS). To get a complete overview of the HackYourFuture curriculum first, click [here](https://github.com/HackYourFuture/curriculum).",
-  "main": "index.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
     "test": "jest",
@@ -21,6 +21,7 @@
   "homepage": "https://github.com/Baraah-Rn/Node.js-class38#readme",
   "dependencies": {
     "body-parser": "^1.20.0",
+    "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "http": "^0.0.1-security",
     "jest": "^28.1.3",
@@ -28,6 +29,9 @@
     "nodemon": "^2.0.19"
   },
   "devDependencies": {
+    "@babel/core": "^7.18.10",
+    "@babel/preset-env": "^7.18.10",
+    "babel-jest": "^28.1.3",
     "supertest": "^6.2.4"
   }
 }
