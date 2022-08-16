@@ -7,7 +7,7 @@ const request = supertest(app)
 
 describe("POST /weather", () => {
   it('returns location temperature if cityName is passed', async() => {
-    const res = await request.post('/weather').send({cityName : "Amsterdam"});
+    const res = await request.post('/weather').send({cityName : "london"});
     expect(res.statusCode).toBe(200);
   });
 
